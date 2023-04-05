@@ -1,0 +1,10 @@
+.ProgressBar-Test {
+    display: block;
+    width: 200px;
+    height: 20px;
+    background: linear-gradient(to right, red, yellow, green);
+}
+
+.ProgressBar-Test span {
+    align-self: center;
+}
