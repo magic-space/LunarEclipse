@@ -11,7 +11,7 @@ const DUMMY_EXPENSES = [
     date: new Date(2021, 2, 20)
   },
   {
-    id: 2,
+    id: '2',
     title: 'Haftpflicht',
     amount: 32.95,
     date: new Date(2020, 0, 1)
