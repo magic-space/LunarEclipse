@@ -1,4 +1,4 @@
-const Character = () => {
+const CharacterInfo = () => {
     return (
         <>
             
@@ -7,4 +7,4 @@ const Character = () => {
 
 }
 
-export default Character;
+export default CharacterInfo;

@@ -1,6 +1,7 @@
 import './assets/App.css';
 import AuthContext from './context/auth-context';
 import MainNavigation from './layouts/MainNavigation';
+import UserInfo from './layouts/UserInfo';
 
 function App() {
   const THREE_DAYS_IN_MS = 3 * 60 * 1000;
@@ -14,7 +15,7 @@ function App() {
         <header className="App-header">
           <img alt="Logo von [Spielname]" className="App-logo" />
           <MainNavigation />
-
+          <UserInfo />
         </header>
         <main></main>
         <footer className="App-footer">
