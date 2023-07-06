@@ -1,3 +1,3 @@
 [submodule "LunarEclipse-ChatService"]
-	path = ./modules/LunarEclipse-ChatService
+	path = LunarEclipse-ChatService
 	url = https://github.com/Equindar/LunarEclipse-ChatService.git
