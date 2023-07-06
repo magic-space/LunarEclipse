@@ -2,6 +2,7 @@ import './assets/App.css';
 import AuthContext from './context/auth-context';
 import MainNavigation from './layouts/MainNavigation';
 import UserInfo from './layouts/UserInfo';
+import Inventory from './components/Inventory/Inventory';
 
 function App() {
   const THREE_DAYS_IN_MS = 3 * 60 * 1000;
@@ -17,7 +18,9 @@ function App() {
           <MainNavigation />
           <UserInfo />
         </header>
-        <main></main>
+        <main>
+          <Inventory />
+        </main>
         <footer className="App-footer">
           <ul>
             <li><a
