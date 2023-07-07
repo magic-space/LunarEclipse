@@ -16,16 +16,19 @@
     ],
     "rules": {
         "indent": [
-            "warn",
-            "spaces"
+            "error",
+            "tab"
         ],
         "quotes": [
-            "error",
+            "warn",
             "single"
         ],
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off",
+        "react/prop-types": "off"
     }
 }
