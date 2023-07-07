@@ -1,5 +1,5 @@
 import { Avatar } from '@mui/material';
-import LogoDevMode from '../assets/flasks-chemistry.svg';
+import LogoDevMode from '../assets/svg/flasks-chemistry.svg';
 import classes from '../assets/HintDevMode.module.css';
 
 const HintDevMode = () => {

@@ -1,8 +1,10 @@
-import './assets/App.css';
-import AuthContext from './context/auth-context';
-import MainNavigation from './layouts/MainNavigation';
-import UserInfo from './layouts/UserInfo';
-import Inventory from './components/Inventory/Inventory';
+import "./assets/App.css";
+import AuthContext from "./context/auth-context";
+import MainNavigation from "./layouts/MainNavigation";
+import UserInfo from "./layouts/UserInfo";
+import Inventory from "./components/Inventory/Inventory";
+import CountdownTimer from "./components/Countdown/CountdownTimer";
+import { Paper } from "@mui/material";
 
 function App() {
   const THREE_DAYS_IN_MS = 3 * 60 * 1000;
@@ -20,6 +22,10 @@ function App() {
         </header>
         <main>
           <Inventory />
+          <Paper>
+            <CountdownTimer targetDate={dateTimeAfterThreeDays}></CountdownTimer>
+          </Paper>
+
         </main>
         <footer className="App-footer">
           <ul>
