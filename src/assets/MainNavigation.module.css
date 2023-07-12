@@ -1,0 +1,17 @@
+ul.main_navigation {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 2rem;
+    justify-content: space-evenly;
+    justify-items: left;
+    border: 1px solid red;
+}
+
+.main_navigation li {
+    font-size: 1.5rem;
+    list-style: none;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border: 1px solid gray;
+}

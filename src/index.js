@@ -1,8 +1,16 @@
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import * as React from 'react';
-
-import './index.css';
+import './assets/index.css';
 import App from './App';
+import HintDevMode from './layouts/HintDevMode';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+	<React.StrictMode>
+		<BrowserRouter>
+			<HintDevMode />
+			<App />
+		</BrowserRouter>
+	</React.StrictMode>
+);
