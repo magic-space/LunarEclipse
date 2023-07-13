@@ -11,9 +11,6 @@
 # testing
 /coverage
 
-# submodules
-/modules
-
 # production
 /build
 
