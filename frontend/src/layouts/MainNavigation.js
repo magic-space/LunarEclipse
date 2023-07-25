@@ -1,15 +1,21 @@
-import classes from '../assets/MainNavigation.module.css';
+import Box from '@mui/material/Box';
+import { Button } from '@mui/material';
+import { MainMenu } from '../data/MainMenu';
 
 const MainNavigation = () => {
-	return (
-		<ul className={classes.main_navigation}>
-			<li>News</li>
-			<li>Suche</li>
-			<li>Wiki</li>
-			<li>Chat</li>
-			<li>Discord</li>
-		</ul>
-	);
+  return (
+    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+      {MainMenu.map((item) => (
+        <Button
+          variant="outlined"
+          startIcon={item.icon}
+          key={item.id}
+        >
+          {item.text}
+        </Button>
+      ))}
+    </Box>
+  );
 };
 
 export default MainNavigation;
