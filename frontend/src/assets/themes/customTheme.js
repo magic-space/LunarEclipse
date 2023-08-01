@@ -1,9 +1,14 @@
-import { orange, pink } from "@mui/material/colors";
-import { createTheme } from "@mui/material/styles";
- 
+import { orange, pink } from '@mui/material/colors';
+import { createTheme } from '@mui/material/styles';
+
 export const customTheme = createTheme({
-  palette: {
-    primary: orange,
-    secondary: pink,
-  },
+    palette: {
+        mode: 'dark',
+        primary: orange,
+        secondary: pink,
+
+        background: {
+            main: '#282C34',
+        }
+    },
 });

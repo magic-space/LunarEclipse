@@ -1,0 +1,16 @@
+main {
+    display: flex;
+    flex-direction: row;
+  }
+
+.test {
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer {
+    position:absolute;
+    bottom: 0;
+    right: 0;
+}

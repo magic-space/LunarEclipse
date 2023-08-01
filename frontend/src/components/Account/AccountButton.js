@@ -1,17 +1,9 @@
+import { Tooltip, IconButton, Avatar, Menu, MenuItem, ListItemIcon, ListItemText } from '@mui/material';
+import { UserMenu } from '../../data/UserMenu';
 import React from 'react';
-import IconButton from '@mui/material/IconButton';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
-import Box from '@mui/material/Box';
-import Tooltip from '@mui/material/Tooltip';
-import Avatar from '@mui/material/Avatar';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import { UserMenu } from '../data/UserMenu';
-import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
 
-export default function UserInfo() {
 
+const AccountButton = props => {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     const handleMenu = (event) => {
@@ -23,13 +15,10 @@ export default function UserInfo() {
     };
 
     return (
-        <Box sx={{ flexGrow: 0 }}>
-            <IconButton>
-                <NotificationsOutlinedIcon />
-            </IconButton>
-            <Tooltip title="Open Account Menu">
-                <IconButton onClick={handleMenu} sx={{ p: 0 }}>
-                    <Avatar alt="Equindar" />
+        <>
+            <Tooltip title="Account">
+                <IconButton onClick={handleMenu} sx={{ p: 0 }} size="large">
+                    <Avatar alt={props.name} />
                 </IconButton>
             </Tooltip>
             <Menu
@@ -56,6 +45,8 @@ export default function UserInfo() {
                     </MenuItem>;
                 })}
             </Menu>
-        </Box>
+        </>
     );
-}
+};
+
+export default AccountButton;
