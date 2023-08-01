@@ -1,9 +1,8 @@
-import { Avatar, Badge, Box, Card, CardContent, CardHeader, CssBaseline, Divider, Fab, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Tab, Tabs, ThemeProvider, Typography, } from "@mui/material";
+import { Avatar, Box, Card, CardContent, CardHeader, CssBaseline, Divider, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Tab, ThemeProvider, Typography, } from "@mui/material";
 import TabContext from '@mui/lab/TabContext';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PaletteIcon from '@mui/icons-material/Palette';
-import './App.css'
-import { appTheme } from '../assets/theme';
+import { appTheme } from '../../assets/theme';
 import React from "react";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
