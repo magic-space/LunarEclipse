@@ -14,7 +14,7 @@ const InventoryListItem = props => {
             }
         >
             <ListItemIcon>
-                <Checkbox></Checkbox>
+                <Checkbox disableRipple></Checkbox>
             </ListItemIcon>
             <PaletteIcon fontSize='large' sx={{ mr: 2 }} />
             <ListItemText

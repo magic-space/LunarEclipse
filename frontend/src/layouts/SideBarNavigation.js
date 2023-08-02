@@ -11,8 +11,12 @@ import { Collapse, List, ListItem, ListItemIcon, ListItemText, ListItemButton } 
 
 export default function SideBarNavigation() {
     const [open, setopen] = useState(true);
+    const [openDEV, setDEVopen] = useState(true);
     const toggleOpen = () => {
         setopen(!open);
+    };
+    const toggleDEVOpen = () => {
+        setDEVopen(!openDEV);
     };
 
     return (
@@ -26,8 +30,8 @@ export default function SideBarNavigation() {
                     <span className={styles.linkText}>{item.text}</span>
                 </NavLink>;
             })}
-            <List sx={{ bgcolor: 'primary.main', p: 0 }}>
-                <ListItemButton onClick={toggleOpen}>
+            <List sx={{ color: 'black', bgcolor: 'primary.main', p: 0, overflow: 'hidden' }}>
+                <ListItemButton onClick={toggleDEVOpen}>
                     <ListItemIcon>
                         <ApiIcon />
                     </ListItemIcon>
@@ -35,11 +39,11 @@ export default function SideBarNavigation() {
                     {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
             </List>
-            <Collapse in={open} timeout='auto'>
-                <List>
+            <Collapse in={openDEV} timeout='auto'>
+                <List sx={{ bgcolor: 'primary.light'}}>
                     <NavLink key="dev" to="dev-settings" className={styles.sideitem}>
                         <ListItem>
-                            <ListItemText primary='Einstellungen' />
+                            <ListItemText primary='Einstellungen' sx={{ color: 'black' }}/>
                         </ListItem>
                     </NavLink>
                 </List>
