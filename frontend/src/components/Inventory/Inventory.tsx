@@ -27,7 +27,6 @@ function Inventory() {
           }
           subheader="Traglast: 38 / 75kg"
         >
-
         </CardHeader>
         <CardContent>
           <TabContext value={value}>

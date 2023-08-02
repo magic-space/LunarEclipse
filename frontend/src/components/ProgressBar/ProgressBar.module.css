@@ -1,4 +1,4 @@
-.progress-bar {
+.progressbar {
     position: relative;
     width: 200px;
     height: 20px;
@@ -8,7 +8,7 @@
     margin: 10px;
   }
   
-  .progress-bar__inner {
+  .progressbar__inner {
     height: 100%;
     width: 100%;
     border: 1px solid #ffffff;
@@ -26,13 +26,13 @@
     justify-content: flex-end;
   }
  
-  .progress-bar__fill {
+  .progressbar__fill {
     background-color: #646464;
     width: 0%;
     transition: all 0.3s ease-out;
   }
   
-  .progress-bar__label {
+  .progressbar__label {
     position: absolute;
     left: 0;
     top: 0;
