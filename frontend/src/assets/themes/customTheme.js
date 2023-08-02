@@ -9,6 +9,7 @@ export const customTheme = createTheme({
 
         background: {
             main: '#282C34',
+            light: '#ffffff',
         }
     },
 });
