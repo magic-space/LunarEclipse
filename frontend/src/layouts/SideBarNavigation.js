@@ -26,13 +26,13 @@ export default function SideBarNavigation() {
                     <span className={styles.linkText}>{item.text}</span>
                 </NavLink>;
             })}
-            <List>
+            <List sx={{ bgcolor: 'primary.main', p: 0 }}>
                 <ListItemButton onClick={toggleOpen}>
                     <ListItemIcon>
                         <ApiIcon />
                     </ListItemIcon>
                     <ListItemText primary="DEV Area" />
-                    { open ? <ExpandLess /> : <ExpandMore />}
+                    {open ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
             </List>
             <Collapse in={open} timeout='auto'>

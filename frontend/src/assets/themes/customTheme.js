@@ -8,8 +8,18 @@ export const customTheme = createTheme({
         secondary: pink,
 
         background: {
+            dark: '#000000',
             main: '#282C34',
-            light: '#ffffff',
-        }
+            light: '#5C6677',
+            paper: '#282C34',
+        },
+    },
+    breakpoints: {
+        values: {
+            mobile: 0,
+            tablet: 640,
+            laptop: 1024,
+            desktop: 1280,
+        },
     },
 });

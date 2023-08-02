@@ -15,13 +15,13 @@ const NotificationButton = props => {
 
     return (
         <>
-            <Badge badgeContent={props.count} color="primary">
-                <Tooltip title="Benachrichtigungen">
-                    <IconButton onClick={handleMenu} size="large">
+            <Tooltip title="Benachrichtigungen">
+                <IconButton onClick={handleMenu} size="large" sx={{mr: 2}}>
+                    <Badge badgeContent={props.count} color="primary">
                         <NotificationsOutlinedIcon />
-                    </IconButton>
-                </Tooltip>
-            </Badge>
+                    </Badge>
+                </IconButton>
+            </Tooltip>
             <Menu className="NotificationMenu"
                 id="menu-notification"
                 anchorEl={anchorEl}
