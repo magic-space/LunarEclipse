@@ -21,10 +21,10 @@ function App() {
             <Routes>
                 <Route element={<Layout theme={customTheme} />}>
                     <Route path='/' />
-                    <Route path='/explore' element={<Inventory weight='50' limit='100' />} />
+                    <Route path='/inventory' element={<Inventory weight='50' limit='100' />} />
                     <Route path='/profile' element={<CharacterProfile />} />
                     <Route path='/kit' element={<ConstructionKit />} /> 
-                    <Route path='/fight' element={<FightOverview timestamp={new Date().getTime()} />} />
+                    <Route path='/fight' element={<FightOverview timestamp={new Date().getTime()} current={4} rounds={12} />} />
                     <Route path='/statistics' element={<Paper>
                         <CountdownTimer targetDate={dateTimeAfterThreeDays}></CountdownTimer>
                     </Paper>} />

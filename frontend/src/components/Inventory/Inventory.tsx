@@ -1,9 +1,9 @@
-import { Autocomplete, Box, Card, CardContent, CardHeader, CssBaseline, Divider, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Tab, ThemeProvider, Typography, } from "@mui/material";
-import { Paper, TextField, InputAdornment, LinearProgress } from "@mui/material";
+import { Box, Card, CardContent, CssBaseline, Divider, List, ListItem, ListItemIcon, ListItemText, ListSubheader, Tab, ThemeProvider, Typography, } from "@mui/material";
+import { Paper, LinearProgress } from "@mui/material";
 import TabContext from '@mui/lab/TabContext';
+import SearchIcon from '@mui/icons-material/Search';
 import SettingsIcon from '@mui/icons-material/Settings';
 import PaletteIcon from '@mui/icons-material/Palette';
-import SearchIcon from '@mui/icons-material/Search';
 import TabPanel from "@mui/lab/TabPanel";
 import TabList from "@mui/lab/TabList";
 import React from "react";
@@ -21,41 +21,13 @@ const Inventory = props => {
   return (
     <ThemeProvider theme={customTheme}>
       <CssBaseline enableColorScheme />
-      <Card sx={{ width: '80%', margin: '5% 10%', borderRadius: 6 }} elevation={1}>
-        <CardHeader
-        sx={{ ml: 2 }}
-          title={
-            <Typography variant="h4">Inventar</Typography>
-          }
-          subheader={
-            <Box sx={{ maxWidth: '50%' }}>
-              <LinearProgress variant='determinate' value={props.weight / props.limit * 100} />
-              <Typography>
-                Kapazität: {props.weight} / {props.limit} kg
-              </Typography>
-            </Box>
-          }
-          action={
-            <Autocomplete
-              sx={{ m: 2 }}
-              renderInput={(params) => <TextField {...params}
-                size="small"
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <SearchIcon />
-                    </InputAdornment>
-                  ),
-                }} />} options={[]}
-            />
-          }
-        />
+      <Card sx={{ width: '70%', margin: '5% 15%', borderRadius: 6 }} elevation={1}>
         <CardContent>
           <Paper elevation={3} sx={{ height: '100%' }}>
             <TabContext value={value}>
               <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <TabList aria-label="Inventar-Kategorie-Tabs" variant="scrollable" onChange={handleChange}>
-                  <Tab label="Alles" value="0" />
+                  <Tab label={<SearchIcon />} value="0" />
                   <Tab label="Waffen" value="1" />
                   <Tab label="Rüstung" value="2" />
                   <Tab label="Materialien" />
@@ -96,7 +68,20 @@ const Inventory = props => {
             </TabContext>
           </Paper>
         </CardContent>
-        <DevelopmentButton />
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', paddingLeft: 3, paddingRight: 3 }}>
+          <Box sx={{ maxWidth: '50%' }}>
+            <LinearProgress variant='determinate' value={props.weight / props.limit * 100} />
+            <Typography>
+              Kapazität: {props.weight} / {props.limit} kg
+            </Typography>
+          </Box>
+          <Typography>
+            Gold: 6.586
+          </Typography>
+        </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'row-reverse', width: '100%' }}>
+          <DevelopmentButton />
+        </Box>
       </Card>
     </ThemeProvider >
   );

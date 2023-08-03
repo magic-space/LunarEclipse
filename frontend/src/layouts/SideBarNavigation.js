@@ -41,9 +41,9 @@ export default function SideBarNavigation() {
             </List>
             <Collapse in={openDEV} timeout='auto'>
                 <List sx={{ bgcolor: 'primary.light'}}>
-                    <NavLink key="dev" to="dev-settings" className={styles.sideitem}>
+                    <NavLink key="dev" to="fight" className={styles.sideitem}>
                         <ListItem>
-                            <ListItemText primary='Einstellungen' sx={{ color: 'black' }}/>
+                            <ListItemText primary='Kampf' sx={{ color: 'black' }}/>
                         </ListItem>
                     </NavLink>
                 </List>

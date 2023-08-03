@@ -1,19 +1,19 @@
-import HomeIcon from '@mui/icons-material/Home';
-import TravelExploreIcon from '@mui/icons-material/TravelExplore';
+import PublicIcon from '@mui/icons-material/Public';
+import InventoryIcon from '@mui/icons-material/Inventory';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import SettingsIcon from '@mui/icons-material/Settings';
 export const SideBar = [
     {
         id: 0,
-        icon: <HomeIcon/>,
-        text: 'Home',
+        icon: <PublicIcon/>,
+        text: 'Karte',
         link: '/'
     },
     {
         id: 1,
-        icon: <TravelExploreIcon/>,
-        text: 'Explore',
-        link: 'explore'
+        icon: <InventoryIcon />,
+        text: 'Inventar',
+        link: 'inventory'
     },
     {
         id: 2,
