@@ -4,7 +4,6 @@ import AppHeader from './AppHeader';
 import CharacterInfo from './CharacterInfo';
 import './Layout.css';
 import { Outlet } from 'react-router-dom';
-import ControlElements from './ControlElements';
 
 
 const Layout = (props) => {
@@ -23,7 +22,7 @@ const Layout = (props) => {
                     <CharacterInfo></CharacterInfo>
                 </main>
                 <footer className='footer'>
-                    <ControlElements />
+
                 </footer>
             </div>
         </ThemeProvider>

@@ -17,7 +17,6 @@ const FightOverview = props => {
             <CssBaseline enableColorScheme />
             <Card sx={{ width: '70%', margin: '5% 15%', borderRadius: 6 }} elevation={1}>
                 <CardHeader
-                    title="Kampf"
                     subheader={<Typography variant="body2">
                         {date.toLocaleDateString('de-DE', { dateStyle: 'full' }) + ', ' + date.getHours() + ':' + date.getMinutes()}
                     </Typography>}
@@ -43,9 +42,9 @@ const FightOverview = props => {
                             </Typography>
                             <List>
                                 <FighterListItem name="Wolf #1" avatar="W" />
+                                <FighterListItem name="Leitwolf" avatar="L" />
                                 <FighterListItem name="Wolf #2" avatar="W" />
-                                <FighterListItem name="Wolf #3" avatar="W" />
-
+                                <FighterListItem name="Jungwolf" avatar="J" />
                             </List>
                         </Box>
                     </Box>
