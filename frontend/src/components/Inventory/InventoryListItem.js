@@ -1,7 +1,9 @@
-import { Checkbox, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { Avatar, Typography, Chip, IconButton } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import TokenIcon from '@mui/icons-material/Token';
 import PaletteIcon from '@mui/icons-material/Palette';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const InventoryListItem = props => {
     return (
@@ -14,9 +16,8 @@ const InventoryListItem = props => {
             }
         >
             <ListItemIcon>
-                <Checkbox disableRipple></Checkbox>
+                <PaletteIcon fontSize='large' sx={{ mr: 2 }} />
             </ListItemIcon>
-            <PaletteIcon fontSize='large' sx={{ mr: 2 }} />
             <ListItemText
                 primary={props.name}
                 secondary={
@@ -32,7 +33,7 @@ const InventoryListItem = props => {
                 }
             >
             </ListItemText>
-            <Typography variant="body1">Goldwert: {props.value}</Typography>
+            <Typography variant="body1"><TokenIcon fontSize="small" sx={{ verticalAlign: 'top', marginRight: 0.5 }} />{props.value}</Typography>
         </ListItem>
     );
 };
