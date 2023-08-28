@@ -8,6 +8,7 @@ import ApiIcon from '@mui/icons-material/Api';
 import { SideBar } from '../data/SideBar';
 import { useState } from 'react';
 import { Collapse, List, ListItem, ListItemIcon, ListItemText, ListItemButton } from '@mui/material';
+import { devTheme } from '../assets/themes/devTheme';
 
 export default function SideBarNavigation() {
     const [open, setopen] = useState(true);
@@ -30,7 +31,7 @@ export default function SideBarNavigation() {
                     <span className={styles.linkText}>{item.text}</span>
                 </NavLink>;
             })}
-            <List sx={{ color: 'black', bgcolor: 'primary.main', p: 0, overflow: 'hidden' }}>
+            <List  theme={devTheme} sx={{ bgcolor: 'primary.main', p: 0, overflow: 'hidden' }}>
                 <ListItemButton onClick={toggleDEVOpen}>
                     <ListItemIcon>
                         <ApiIcon />
