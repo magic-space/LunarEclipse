@@ -1,10 +1,10 @@
-import { Card, CardHeader } from "@mui/material";
+import { Card, CardHeader } from '@mui/material';
 
 const CharacterProfile = () => {
     return (
         <Card>
             <CardHeader
-                title="Equindar" />
+                title='Equindar' />
         </Card>
     );
 };
